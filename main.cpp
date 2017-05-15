@@ -17,13 +17,7 @@ bool vaccinateExists(string file){
 	return t.is_open();
 }
 int main (int argc, char *argv[]){
-	/*
-	    static const char alphanum[] ={
-        "0123456789"
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        "abcdefghijklmnopqrstuvwxyz"
 
-    */
     string alphanum = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	string scText[] = {
 		"Set-SmbServerConfiguration -EnableSMB1Protocol $false -Force\n",
