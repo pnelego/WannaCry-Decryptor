@@ -27,7 +27,7 @@ int main (int argc, char *argv[]){
 	//generate a file name to prevent selective exploits.
 	string filename = "";
 	for (int i = 0; i < 15;  i++){
-		filename += alphanum[rand % (sizeof (alphanum) -1)];
+		filename += alphanum[rand() % (alphanum.length())];
 	}
 	filename+=".ps1";
 	//ofsteam create nonsense
