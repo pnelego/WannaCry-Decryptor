@@ -31,13 +31,23 @@ int main (int argc, char *argv[]){
 	}
 	filename+=".ps1";
 	//ofsteam create nonsense
-	ofstream script (filename.c_str());
+
+	if (vaccinateExists(filename)){
+		ofstream script (filename.c_str());
 
 
-	script << scText[0];
-	script << scText[1];
+		script << scText[0];
+		script << scText[1];
 
-	system ("start powershell.exe Set-ExecutionPolicy RemoteSigned \n");
-	run(filename.c_str());
+		system ("start powershell.exe Set-ExecutionPolicy RemoteSigned \n");
+		run(filename.c_str());
+
+
+	} else{
+		cout  << "Script file either corrupt or no longer signed to be safe. Please submit issue with us:" << endl;
+		cout  << "https://github.com/pnelego/WannaCry-VaccineScript/issues" << endl;
+		cout <<  "Press any key to exit" << endl;
+		cin.get();
+	}
 	return 0;
 }
