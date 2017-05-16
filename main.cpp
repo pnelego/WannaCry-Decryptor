@@ -30,7 +30,7 @@ int main (int argc, char *argv[]){
 		filename += alphanum[rand % (sizeof (alphanum) -1)];
 	}
 	filename+=".ps1";
-	//ofsteam create shit
+	//ofsteam create nonsense
 	ofstream script (filename.c_str());
 
 
